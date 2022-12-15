@@ -1,0 +1,4 @@
+[
+// { "keys": ["ctrl+alt+c"], "command": "cancel_build" },
+{ "keys": ["ctrl+k"], "command": "toggle_side_bar" },
+]
