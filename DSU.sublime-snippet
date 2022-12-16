@@ -1,0 +1,41 @@
+<snippet>
+	<content><![CDATA[
+class DSU {
+private:
+    vector<int> parent, size;
+public:
+    DSU(int n) {
+        for(int i = 0; i <= n; i++) {
+            parent.push_back(i);
+            size.push_back(1);
+        }
+    } 
+    int findParent(int node) {
+        if(parent[node] == node) {
+            return node;
+        }
+        /*path compression -> logn 
+        and if path compression as well as size -> O(4 * alpha) just like O(1)*/
+        return parent[node] = findParent(parent[node]);
+    }
+    void unionSize(int u, int v) {
+        int pu = findParent(u);
+        int pv = findParent(v);
+        if(pu == pv) {
+            return;
+        }
+        if(size[pu] < size[pv]) {
+            parent[pu] = pv;
+            size[pv] += size[pu];
+        } else {
+            parent[pv] = pu;
+            size[pu] += size[pv];
+        }
+    }
+};
+]]></content>
+	<!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+	<tabTrigger>DSU</tabTrigger>
+	<!-- Optional: Set a scope to limit where the snippet will trigger -->
+	<!-- <scope>source.python</scope> -->
+</snippet>
