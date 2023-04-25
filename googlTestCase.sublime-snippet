@@ -9,12 +9,11 @@ using namespace std;
 #define ppb     pop_back
 #define pii     pair<int, int>
 #define mii     map<int, int>
-#define mp      make_pair
 #define ff      first
 #define ss      second
 #define endl    "\n"
-#define MAX     LONG_LONG_MAX
-#define MIN     LONG_LONG_MIN
+#define MAX     LLONG_MAX
+#define MIN     LLONG_MIN
 #define lb      lower_bound
 #define ub      upper_bound
 #define inf     1e18
@@ -22,6 +21,8 @@ using namespace std;
 #define py      cout << "YES\n"
 #define pn      cout << "NO\n"
 #define ll     long long
+#define sqrt    sqrtl
+#define PI      3.14159265
 #define set_bits __builtin_popcountll
 #define rep(i,a,b) for(int i = a; i < b; i++)
 #define fastio() ios_base::sync_with_stdio(false); cin.tie(NULL); cout.tie(NULL)
@@ -68,6 +69,8 @@ int mpow(int a, int b) {if (b == 0) return 1; int res = 1; a %= mod; while (b) {
 int mmul(int a, int b) {a = a % mod; b = b % mod; return (((a * b) % mod) + mod) % mod;} 
 int madd(int a, int b) {a = a % mod; b = b % mod; return (((a + b) % mod) + mod) % mod;}
 int inv(int i) {if (i == 1) return 1; return (mod - ((mod / i) * inv(mod % i)) % mod) % mod;}
+int max(int a, int b) {return (a >= b ? a : b);}
+int min(int a, int b) {return (a <= b ? a : b);}
 long long binpow(long long a, long long b) {
     long long res = 1;
     while (b > 0) {

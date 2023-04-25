@@ -1,11 +1,13 @@
 {
 	"color_scheme": "Packages/Material Monokai/MaterialMonokaiDark.tmTheme",
 	"save_on_focus_lost": true,
-	// "font_face": "Fira Code",
+	"trim_automatic_white_space": false,
+	"font_size": 14,
+	
+	"auto_complete": false,
+
 	"ignored_packages":
 	[
 		"Vintage",
 	],
-	"trim_automatic_white_space": false,
-	"font_size": 14,
 }
